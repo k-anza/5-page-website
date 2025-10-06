@@ -1,20 +1,50 @@
-/* Make all images scale nicely */
+/* ---------- General Image Styling ---------- */
 img {
-  max-width: 600px;   /* sets the maximum size */
-  width: 100%;        /* makes it shrink if the screen is smaller */
-  height: auto;       /* keeps proportions */
-  display: block;     /* removes extra white space under image */
-  margin: 1rem auto;  /* adds spacing and centers the image */
+  max-width: 600px;         /* sets the maximum image size */
+  width: 100%;              /* makes image responsive */
+  height: auto;             /* keeps proportions */
+  display: block;           /* removes extra white space below image */
+  margin: 1rem auto;        /* centers and adds spacing */
 }
+
+/* ---------- Header ---------- */
 header {
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
+/* ---------- Navigation Bar ---------- */
+nav {
+  position: sticky;          /* keeps nav bar visible when scrolling */
+  top: 0;
+  background: #ffffff;
+  z-index: 10;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Remove bullet points and center items */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;             /* horizontal layout */
+  justify-content: center;
+  gap: 1rem;                 /* space between items */
+}
+
+/* Links inside nav */
 nav a {
-  margin: 0 0.75rem;
+  padding: 0.35rem 0.6rem;
   color: #0055aa;
   text-decoration: none;
+  border-radius: 0.25rem;
+  transition: background 0.15s;
+}
+
+/* Hover and active link styles */
+nav a:hover {
+  background: #eef5ff;
 }
 
 nav a.active {
@@ -22,6 +52,7 @@ nav a.active {
   text-decoration: underline;
 }
 
+/* ---------- Page Body ---------- */
 body {
   background-color: #f9f9f9;
   margin: 0 auto;
@@ -31,3 +62,11 @@ body {
   line-height: 1.5;
   color: #333;
 }
+
+/* ---------- Positioning Example ---------- */
+.float-right {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
